@@ -1,0 +1,30 @@
+#content
+{
+    grid-area: content;
+    display: grid;   
+    grid-template-areas:"Backlog Ready Progress Finish";
+    grid-template-columns: 1fr 1fr 1fr 1fr;  
+    grid-template-rows: 100%;
+    grid-gap: 10px;
+    text-align: center;
+}
+
+#backlog{
+    grid-area: Backlog;
+    background-color:blueviolet;
+}
+
+#ready{
+    grid-area: Ready;
+    background-color:aqua;
+}
+
+#progress{
+    grid-area: Progress;
+    background-color:blue;
+}
+
+#finish{
+    grid-area: Finish;
+    background-color:brown;
+}

@@ -23,6 +23,15 @@ nav{
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
 
+.page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 300px);
+    min-height: 100vh;
+    background-color: #f4f7fa;
+}
+
 .logo{
     text-align:  center;
     display: flex;
