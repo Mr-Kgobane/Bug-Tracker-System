@@ -7,12 +7,12 @@
     grid-template-rows: calc(100vh - 40px);
     grid-gap: 20px;
     padding: 20px;
-    text-align: center;
-    
+    text-align: center;  
 }
 
 h1{
-    padding: 20px;
+    margin: 7px;
+    padding: 7px;
     background-color:white;
     border-color: black;
     border-radius: 20px;
@@ -21,20 +21,29 @@ h1{
 
 #backlog{
     grid-area: Backlog;
-    background-color:blueviolet;
+    background-color:rgb(219, 219, 219);
+    border-radius: 10px;
 }
 
 #ready{
     grid-area: Ready;
-    background-color:aqua;
+    background-color:rgb(219, 219, 219);
+    border-radius: 10px;
 }
 
 #progress{
     grid-area: Progress;
-    background-color:blue;
+    background-color:rgb(219, 219, 219);
+    border-radius: 10px;
 }
 
 #finish{
     grid-area: Finish;
-    background-color:brown;
+    background-color:rgb(219, 219, 219);
+    border-radius: 10px;
+}
+
+.issue{
+    background-color:yellow;
+    margin: 15px;
 }
