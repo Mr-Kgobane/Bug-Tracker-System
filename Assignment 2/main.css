@@ -9,15 +9,13 @@
 }
 body{ 
     background: #dfe9f5;
-    position: absolute;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
 }
 nav{
-    position: relative;
+    position: absolute;
+    top: 0;
+    bottom: 0;
     height: 100%;
+    left: 0;
     background: #fff;
     width: 90px;
     overflow: hidden;
@@ -44,7 +42,6 @@ nav{
     font-size: 18px;
     text-transform: uppercase;
 }
-
 a{
     position: relative;
     color: rgb(85,83,83);
@@ -54,7 +51,7 @@ a{
     padding: 10px;
 }
 
-nav .fa-solid{
+.fa-solid{
     position: relative;
     width: 70px;
     height: 40px;
@@ -69,134 +66,14 @@ nav .fa-solid{
     margin-left: 10px;
 }
 
-nav a:hover{
+a:hover{
     background: #eee;
 }
 nav:hover{
     width: 280px;
     transition: all 0.5s ease;
-    
 }
 .logout{
     position: absolute;
     bottom: 0;
-}
-
-/*User Page*/
-.User{
-    width: 80%;
-    padding: 10px 0 0 10px;
-    position: absolute;
-    left: 105%;
-    top: 1%;
-}
-
-.fa-solid{
-    height: 20px;
-    font-size: 20px;
-}
-.button{
-    border: 1px solid #1199ff;
-    background: #000;
-    color: #1199ff;
-    width: 200px;
-    margin-bottom: 10px;
-    height: 40px;
-    font-size: 14px;
-    text-align: center;
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.button:hover{
-    color: #000;
-    background: #fff;
-}
-
-.Add{
-    background: rgba(0, 0, 0, 0.75);
-    width: 1445px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    display: none;
-    left: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.User-page{
-    height: 420px;
-    width:500px;
-    background: #fff;
-    padding: 20px;
-    margin: 25px;
-    border-radius: 5px;
-    position: relative;
-}
-
-.User-page img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: absolute;
-    top: -80px;
-    left: calc(50% - 50px);
-}
-
-input{
-    margin: 20px auto;
-    display: block;
-    width: 50%;
-    padding: 8px;
-    border: 1px solid gray;
-}
-
-.User-page input[type="text"], input[type="password"], input[type="email"]{
-    border: none;
-    font-size: 14px;
-    border: 3px solid gray;
-    padding: 10px 10px;
-    width: 200px;
-    outline: none;
-    color: #000;
-    border-radius: 24px;
-    transition: 0.25s;
-}
-
-.User-page input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus{
-    width: 220px;
-    border-color: #ffc400;
-}
-
-.User-page input[type="submit"]{
-    border: 0;
-    border: 3px solid #ffc400;
-    padding: 14px 10px;
-    outline: none;
-    width: 120px;
-    color: #000;
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer;
-    background: #fff;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.User-page input[type="submit"]:hover{
-    background: #ffc400;
-}
-
-.User-page .close{
-    position: absolute;
-    top: -10px;
-    left: calc(108% - 50px);
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    box-shadow: 6px 6px 29px -4px rgba(0, 0, 0, 0.75);
-    cursor: pointer;
 }
