@@ -8,11 +8,15 @@
     grid-gap: 20px;
     padding: 20px;
     text-align: center;
+    
 }
 
 h1{
     padding: 20px;
-    background-color:beige;
+    background-color:white;
+    border-color: black;
+    border-radius: 20px;
+    border: solid;
 }
 
 #backlog{
