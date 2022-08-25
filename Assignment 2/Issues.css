@@ -44,6 +44,14 @@ h1{
 }
 
 .issue{
-    background-color:yellow;
+    background-color:white;
+    border-radius: 10px;
     margin: 15px;
+}
+
+.BTN_Issue_Add{
+    width: 90%;
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 200%;
 }
