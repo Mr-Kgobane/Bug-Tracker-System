@@ -19,6 +19,7 @@ h1{
     border: solid;
 }
 
+/*-------------- Columns ---------------------------------*/
 #backlog{
     grid-area: Backlog;
     background-color:rgb(219, 219, 219);
@@ -43,6 +44,8 @@ h1{
     border-radius: 10px;
 }
 
+/*-------------------------------------------------------*/
+
 .BTN_Issue_Add{
     width: 90%;
     padding: 7px;
@@ -50,6 +53,7 @@ h1{
     font-size: 200%;
 }
 
+/*-------------- Issues ---------------------------------*/
 .issue{
     background-color:white;
     border-radius: 10px;
@@ -77,11 +81,13 @@ h1{
 .severity{
     grid-area: Severity;
     background-color: green;
+    border-radius: 10px;
 }
 
 .platform{
     grid-area: Platform;
     background-color: orange;
+    border-radius: 10px;
 }
 
 .duration{
@@ -91,3 +97,5 @@ h1{
 .view-more{
     grid-area: View-More;
 }
+
+/*--------------------------------------------------------*/
