@@ -54,10 +54,9 @@ function LoadBugs(){
         if (key.includes("Bug")) {
             // Dynamically creates a div
             var div = document.createElement('div');
-            div.id = key;        
-            div.innerHTML = `Hi there! ${key}`;
-            div.className = `border-pad`;
-        
+            div.id = key;
+            div.className = "issue";      
+            div.innerHTML = `Hi there! ${key}`;      
             
             let keyValues = localStorage.getItem(key);
             //console.log(keyValues);
