@@ -62,23 +62,16 @@ function LoadBugs(){
             //console.log(keyValues);
             if (keyValues.includes('#backlog')){
                 document.getElementById("backlog").appendChild(div.cloneNode(true));
-                // Creates onclick event on newly created div
-                var element = document.getElementById(key);
-                element.onclick = function(event) {
-                alert(key);
-                };
             }
             else if (keyValues.includes('#ready')){
                 document.getElementById("ready").appendChild(div.cloneNode(true));
-                // Creates onclick event on newly created div
-               
+                // Creates onclick event on newly created div         
             }
             else if (keyValues.includes('#progress')){
-                document.getElementById("progress").appendChild(div.cloneNode(true));
-           
-            }else if (keyValues.includes('#finish')){
-                document.getElementById("finish").appendChild(div.cloneNode(true));
-             
+                document.getElementById("progress").appendChild(div.cloneNode(true));        
+            }
+            else if (keyValues.includes('#finish')){
+                document.getElementById("finish").appendChild(div.cloneNode(true));    
             }      
         }
     }
