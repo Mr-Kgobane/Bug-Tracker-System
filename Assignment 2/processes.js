@@ -24,7 +24,7 @@ if (localStorage.length <= 0) {
     localStorage.setItem("Project_5", "Omega");
 
     localStorage.setItem("Bug_1", "vitae, orci. Phasellus dapibus#non, lobortis quis, pede. Suspendisse dui. Fusce diam nunc, ullamcorper#porta#2022/02/22#orci#ready");
-    localStorage.setItem("Bug_2", "condimentu#dolor sit amet, consectetuer adipiscing#natoque#2023/04/17#nunc,#backlog");
+    localStorage.setItem("Bug_2", "condimentu#dolor sit amet, consectetuer adipiscing#natoque#2023/04/17#nunc, #backlog");
     localStorage.setItem("Bug_3", "Cum sociis natoque penatibus#massa. Quisque porttitor eros nec#et#2022/09/07#porttitor#ready");
     localStorage.setItem("Bug_4", "feugiat nec,#eleifend egestas. Sed pharetra, felis eget varius ultrices, mauris ipsum#lobortis#2021/09/29#cubilia#ready");
     localStorage.setItem("Bug_5", "cursus luctus,#Sed auctor odio a purus. Duis#scelerisque#2022/12/27#semper#progress");
@@ -58,12 +58,40 @@ function LoadBugs(){
             div.innerHTML = `Hi there! ${key}`;
             div.className = `border-pad`;
         
-            document.body.appendChild(div.cloneNode(true));
-            // Creates onclick event on newly created div
-            var element = document.getElementById(key);
-            element.onclick = function(event) {
+            
+            let keyValues = localStorage.getItem(key);
+            //console.log(keyValues);
+            if (keyValues.includes('#backlog')){
+                document.getElementById("backlog").appendChild(div.cloneNode(true));
+                // Creates onclick event on newly created div
+                var element = document.getElementById(key);
+                element.onclick = function(event) {
                 alert(key);
-            };
+                };
+            }
+            else if (keyValues.includes('#ready')){
+                document.getElementById("ready").appendChild(div.cloneNode(true));
+                // Creates onclick event on newly created div
+                var element = document.getElementById(key);
+                element.onclick = function(event) {
+                alert(key);
+                };
+            }
+            else if (keyValues.includes('#progress')){
+                document.getElementById("progress").appendChild(div.cloneNode(true));
+                // Creates onclick event on newly created div
+                var element = document.getElementById(key);
+                element.onclick = function(event) {
+                alert(key);
+                };
+            }else if (keyValues.includes('#finish')){
+                document.getElementById("finish").appendChild(div.cloneNode(true));
+                // Creates onclick event on newly created div
+                var element = document.getElementById(key);
+                element.onclick = function(event) {
+                alert(key);
+                };
+            }      
         }
     }
 }
