@@ -54,7 +54,7 @@
                     <p class="severity">Severity</p>
                     <p class="platform">Platform</p>         
                     <p class="duration">Duration</p>
-                    <p class="view-more">-view more-</p>
+                    <button class="view-more" onclick="openEditForm()">-view more-</button>
                 </div>
             </div>
             
@@ -78,6 +78,21 @@
             </div>
         </div>
     </div>
+    <div class = "issuesPopup">
+        <div class="formPopup" id="editPopup">
+            <form class="formContainer">               
+                <h2 class="summary">Summary</h2>
+                <p class="user-reported">User Reported</p>
+                <p class="severity">Severity</p>
+                <p class="platform">Platform</p>         
+                <p class="duration">Duration</p>
+                <button type="button" class="btn_close" onclick="closeEditForm()">Close</button>      
+            </form>
+        </div>
+
+    </div>
+
+    <script src="./Issues.js" defer></script>
 
 </body>
 </html>
