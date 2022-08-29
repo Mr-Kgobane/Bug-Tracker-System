@@ -9,15 +9,19 @@
 }
 body{ 
     background: #dfe9f5;
-}
-nav{
     position: absolute;
+    height: 100%;
     top: 0;
     bottom: 0;
-    height: 100%;
     left: 0;
+    display: flex;
+}
+nav{
+    position: sticky;
+    height: 100%;
     background: #fff;
     width: 90px;
+    height: inherit;
     overflow: hidden;
     transition: width 0.2s linear;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
@@ -42,6 +46,7 @@ nav{
     font-size: 18px;
     text-transform: uppercase;
 }
+
 a{
     position: relative;
     color: rgb(85,83,83);
@@ -51,7 +56,7 @@ a{
     padding: 10px;
 }
 
-.fa-solid{
+nav .fa-solid{
     position: relative;
     width: 70px;
     height: 40px;
@@ -66,14 +71,208 @@ a{
     margin-left: 10px;
 }
 
-a:hover{
+nav a:hover{
     background: #eee;
 }
 nav:hover{
     width: 280px;
     transition: all 0.5s ease;
+    
 }
 .logout{
     position: absolute;
     bottom: 0;
+}
+
+/*User Page*/
+.User{
+    width: 300px;
+    padding: 10px 0 0 10px;
+    position: relative;
+    left: 1%;
+    top: 1%;
+}
+
+.fa-solid{
+    height: 20px;
+    font-size: 20px;
+}
+.button{
+    border: 1px solid #1199ff;
+    background: #000;
+    color: #1199ff;
+    width: 200px;
+    margin-bottom: 10px;
+    height: 40px;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.button:hover{
+    color: #000;
+    background: #fff;
+}
+
+.Add{
+    width: 300px;
+    height: 400px;
+    position: relative;
+    display: none;
+    top: 150px;
+    left: -54%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.Add.active {
+    display: flex;
+}
+.User-page{
+    height: 300px;
+    width:300px;
+    background: #fff;
+    padding: 20px;
+    margin: 7px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.User-page img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    left: calc(0% + 15px);
+}
+
+input,.btn{
+    margin: 10px auto;
+}
+
+.User-page input[type="text"]{
+    display: block;
+    font-size: 14px;
+    margin-left: 20px;
+    border: 3px solid gray;
+    padding: 10px 10px;
+    width: 150px;
+    outline: none;
+    color: #000;
+    position: relative;
+    left: 57px;
+    top: -20px;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.User-page input[type="email"],#username{
+    display: block;
+    margin-left: 15px;
+    border: 3px solid gray;
+    padding: 10px 10px;
+    width: 220px;
+    font-size: 14px;
+    outline: none;
+    color: #000; 
+    position: relative;
+    left: -3px;
+    top: -20px;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.User-page input[type="text"]:focus{
+    width: 160px;
+    border-color: #ffc400;
+}
+
+.User-page input[type="email"]:focus, #username:focus{
+    width: 230px;
+    border-color: #ffc400;
+}
+.User-page .btn{
+    border: 0;
+    border: 3px solid #ffc400;
+    padding: 14px 10px;
+    outline: none;
+    width: 120px;
+    color: #000;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    background: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    left: 57px;
+    top: -20px;
+}
+
+.User-page .btn:hover{
+    background: #ffc400;
+}
+
+.User-page .close{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 29px -4px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+.User-detail{
+    width: 280px;
+    height: 120px;
+    box-shadow: 0px 0px 10px gray;
+    margin: 0 1em 1em 0;
+    background: linear-gradient(#eef,#dfe9f5);
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.new{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1500px;
+    height: 79%;
+    margin: 2em 0em; 
+    position: relative;
+    left:-13%;
+    top: 10%;
+}
+
+.btn-RemoveEdit{
+    width: 70px;
+    height: 30px;
+    background: #fff;
+    margin-right: 30px;
+    color: #000;
+    transition: 0.5s;
+    text-transform: uppercase;
+    align-items: center;
+    border: 2px solid black;
+    position: relative;
+    left: 10px;
+    cursor: pointer;
+    box-shadow: inset;
+}
+
+.btn-RemoveEdit:hover{
+    width: 80px;
+    background: #eff;
+    color: #000;
+   
+}
+.User-detail:hover{
+    width: 300px;
+    height: 140px;
 }
