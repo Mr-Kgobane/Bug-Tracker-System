@@ -1,16 +1,24 @@
 /*User Page*/
+#content
+{
+    display: grid;   
+    grid-template-areas:"User" "New"; 
+    grid-template-rows: 4rem 60vh;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    text-align: center;  
+}
+
 .User{
+    grid-area: User;
+    display: block;
     width: 300px;
     padding: 10px 0 0 10px;
     position: relative;
-    left: 1%;
-    top: 1%;
+    background-color: #1199ff;
 }
 
-.fa-solid{
-    height: 20px;
-    font-size: 20px;
-}
 .button{
     border: 1px solid #1199ff;
     background: #000;
@@ -36,16 +44,15 @@
     height: 400px;
     position: relative;
     display: none;
-    top: 150px;
-    left: -54%;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
+    z-index: 1;
+    left: calc(calc(100vw - 300px)/2); 
+    top: 0;  
 }
 
 .Add.active {
     display: flex;
 }
+
 .User-page{
     height: 300px;
     width:300px;
@@ -133,7 +140,7 @@ input,.btn{
     background: #ffc400;
 }
 
-.User-page .close{
+.User-page .close{  
     position: absolute;
     top: -10px;
     right: -10px;
@@ -154,14 +161,16 @@ input,.btn{
 }
 
 .new{
+    grid-area: New;
+    background-color:#ffc400;
+    border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
-    width: 1500px;
-    height: 79%;
-    margin: 2em 0em; 
+    width: 80vw;
+    height: 100%;
+    margin: 20px;
+    padding: 20px;
     position: relative;
-    left:-13%;
-    top: 10%;
 }
 
 .btn-RemoveEdit{

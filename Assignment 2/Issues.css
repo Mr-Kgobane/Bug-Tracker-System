@@ -1,6 +1,5 @@
 #content
 {
-    grid-area: content;
     display: grid;   
     grid-template-areas:"Backlog Ready Progress Finish";
     grid-template-columns: 1fr 1fr 1fr 1fr;  
@@ -101,14 +100,12 @@ h1{
 
 /*------------------------ Popup -------------------------*/
 .formPopup{
+    display: none;
     position: relative;
     max-width: 350px;
     max-height: 100vh;;
-
-    background-color: orange;
     z-index: 1;
-    left: calc(calc(100vw - 350px)/2);
-    
+    left: calc(calc(100vw - 350px)/2);   
 }
 
 .formContainer{
