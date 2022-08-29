@@ -23,10 +23,6 @@ nav{
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
 
-.header{
-
-}
-
 .page {
     position: relative;
     width: calc(100% - 90px);
