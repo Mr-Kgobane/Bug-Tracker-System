@@ -7,7 +7,7 @@
     <title>User</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <script src="main.js"></script>
+   
 </head>
 <body>
     <nav>
@@ -42,33 +42,27 @@
     </nav>
     
     <div class="User">
-       <button type="button" class="button" id="button">
+       <button  type="button" class="button" id="popup">
             <i class="fa-solid fa-plus"></i>
        </button>
+    </div>
+
+    <div class="new" id="Container">
         
     </div>
-    <div class="Add">
+    <form class="Add">
         
         <div class="User-page">
-            <img src="images/close.png" alt="" class="close">
+            <button class="close" id="close">&times;</button>
             <img src="images/user3.png" alt="">
             <input type="text" name="" placeholder="Enter Name" id="name">
             <input type="text" name="" placeholder="Enter Surname" id="surname">
             <input type="text" name="" placeholder="Enter Username" id="username" >
-            <input type="password" name="" placeholder="Enter Password" id="password">
             <input type="email" name="" placeholder="Enter Email" id="email">
-            <input type="submit" value="Login" onclick="">
+            <button type="button" class="btn">Add</button>
         </div>
-    </div>
+    </form>
 
-    <script>
-        document.getElementById("button").addEventListener("click",function(){
-            document.querySelector(".Add").style.display = "flex";
-        })
-
-        document.querySelector(".close").addEventListener("click",function(){
-            document.querySelector(".Add").style.display = "none";
-        })
-    </script>
+    <script src="Javascript/Main.js" > </script>
 </body>
 </html>
