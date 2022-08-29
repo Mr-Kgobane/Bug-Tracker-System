@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT Systems - Issues</title>
+    <link rel="stylesheet" href="./Styles/main.css">
+    <link rel="stylesheet" href="./Styles/Issues.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" class="logo">
+                    <img src="images/logo.png" alt="">
+                    <span class="nav-item">BT Sytems</span>
+                </a>
+            </li>
+            <li><a href="./Home.html">
+                <i class="fa-solid fa-house"></i>
+                <span class="nav-item">Home</span>
+            </a></li>
+            <li><a href="./User.html">
+                <i class="fa-solid fa-pencil"></i>
+                <span class="nav-item">User</span>
+            </a></li>
+            <li><a href="./Issues.html">
+                <i class="fa-solid fa-bars-progress"></i>
+                <span class="nav-item">Bugs</span>
+            </a></li>
+            <li><a href="./Projects.html">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span class="nav-item">Project</span>
+            </a></li>
+            <li><a href="#" class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="nav-item">Log Out</span>
+            </a></li>
+        </ul>
+    </nav>
+    <div class="page">
+        <div id="content">
+            <div id="backlog">
+                <h1>
+                    Backlog
+                </h1>
+                <Input class="BTN_Issue_Add" type="button" value="+" onclick="alert('Button Clicked')"/>
+                <!-- <div class="issue">
+                    <h2 class="summary">Summary</h2>
+                    <p class="user-reported">User Reported</p>
+                    <p class="severity">Severity</p>
+                    <p class="platform">Platform</p>         
+                    <p class="duration">Duration</p>
+                    <button class="view-more" onclick="openEditForm()">-view more-</button>
+                </div> -->
+            </div>
+            
+            <div id="ready">
+                <h1>
+                    Ready
+                </h1>
+                <Input class="BTN_Issue_Add" type="button" value="+" onclick="alert('Button Clicked')"/>
+            </div>
+            <div id="progress">
+                <h1>
+                    In Progress
+                </h1>
+                <Input class="BTN_Issue_Add" type="button" value="+" onclick="alert('Button Clicked')"/>
+            </div>
+            <div id="finish">
+                <h1>
+                    Done
+                </h1>
+                <Input class="BTN_Issue_Add" type="button" value="+" onclick="alert('Button Clicked')"/>
+            </div>
+        </div>
+    </div>
+    <div class = "issuesPopup">
+        <div class="formPopup" id="editPopup">
+        </div>
+
+    </div>
+
+    <script src="./Javascript/Issues.js" defer></script>
+
+</body>
+</html>
