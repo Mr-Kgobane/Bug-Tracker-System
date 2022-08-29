@@ -59,7 +59,7 @@ h1{
     margin: 15px;
     padding: 7px;
     display: grid;
-    grid-template-areas: "Summary Summary"
+    grid-template-areas:"Summary Summary"
                         "User-Reported User-Reported"
                         "Severity Platform"
                         "Duration Duration"
