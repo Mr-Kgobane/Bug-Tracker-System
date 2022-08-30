@@ -49,32 +49,53 @@ if (localStorage.length <= 0) {
 //Load the dynamic objects according to what is in localstorage:
 //===================================================================================================================================================================
 function LoadBugs(){
+    // To change the height of the container dynamically we must have the containers as variables.
+    const backlog = document.getElementById("backlog");
+    const ready = document.getElementById("ready");
+    const progress = document.getElementById("progress");
+    const finish = document.getElementById("finish");
+
     for (let i = 0; i < localStorage.length; i++) {
         let key = localStorage.key(i);
         if (key.includes("Bug")) {
+            let values = localStorage.getItem(key).split("#");
             // Dynamically creates a div
-            var div = document.createElement('div');
+            const div = document.createElement('div');
             div.id = key;
-            div.className = "issue";      
-            div.innerHTML = `Hi there! ${key}`;      
+            div.className = "issue";     
+            div.innerHTML = `<h2 class="summary">${values[0]}</h2>
+            <p class="user-reported">${values[4]}</p>
+            <p class="severity">Severity</p>
+            <p class="platform">Platform</p>         
+            <p class="duration">${values[3]}</p>
+            <button class="view-more" onclick="openEditForm('${key}')">-view more-</button>`;
             
             let keyValues = localStorage.getItem(key);
             //console.log(keyValues);
             if (keyValues.includes('#backlog')){
-                document.getElementById("backlog").appendChild(div.cloneNode(true));
+                backlog.appendChild(div.cloneNode(true));
             }
             else if (keyValues.includes('#ready')){
-                document.getElementById("ready").appendChild(div.cloneNode(true));
-                // Creates onclick event on newly created div         
+                ready.appendChild(div.cloneNode(true));       
             }
             else if (keyValues.includes('#progress')){
-                document.getElementById("progress").appendChild(div.cloneNode(true));        
+                progress.appendChild(div.cloneNode(true));        
             }
             else if (keyValues.includes('#finish')){
-                document.getElementById("finish").appendChild(div.cloneNode(true));    
+                finish.appendChild(div.cloneNode(true)); 
             }      
         }
     }
+
+    // Makes containers large enough to fit content.
+    backlog.style.height = "fit-content";
+    backlog.style.padding = "5px";
+    ready.style.height = "fit-content";
+    ready.style.padding = "5px";
+    progress.style.height = "fit-content";
+    progress.style.padding = "5px";
+    finish.style.height = "fit-content";
+    finish.style.padding = "5px";
 }
 
 window.onload = function(){
@@ -82,12 +103,15 @@ window.onload = function(){
 }
 
 // --------------------- Creates Pupup Window --------------------//
-function openEditForm(){
+function openEditForm(key){
     document.getElementById("editPopup").style.display = "block";
+    selectedBug = key;
+    values = localStorage.getItem(key).split("#");/////////////////////////////////////////////////////
 }
 
-function closeEditForm(){
+function closeEditForm(value){
     document.getElementById("editPopup").style.display = "none";
+    selectedBug = "";
 }
 
 

@@ -1,14 +1,14 @@
 let selectedUser;
 
-if (localStorage.length <= 0) {
-    localStorage.setItem("User_1", "Brendan#O'connor#sed.eu@outlook.ca#venenatis");
-    localStorage.setItem("User_2", "Jessamine#Wynn#et.magnis.dis@google.edu#elementum");
-    localStorage.setItem("User_3", "Callie#Huber#risus@outlook.net#Donec");
-    localStorage.setItem("User_4", "Regina#Sykes#sed.sapien.nunc@icloud.couk#ligula");
-    localStorage.setItem("User_5", "Adena#Lawson#at@icloud.couk#arcu");
-    localStorage.setItem("User_6", "Otto#Sawyer#eget@hotmail.org#Nam");
-    localStorage.setItem("User_7", "Scarlet#Hyde#amet.consectetuer@outlook.net#pede");
-}
+// if (localStorage.length <= 0) {
+//     localStorage.setItem("User_1", "Brendan#O'connor#sed.eu@outlook.ca#venenatis");
+//     localStorage.setItem("User_2", "Jessamine#Wynn#et.magnis.dis@google.edu#elementum");
+//     localStorage.setItem("User_3", "Callie#Huber#risus@outlook.net#Donec");
+//     localStorage.setItem("User_4", "Regina#Sykes#sed.sapien.nunc@icloud.couk#ligula");
+//     localStorage.setItem("User_5", "Adena#Lawson#at@icloud.couk#arcu");
+//     localStorage.setItem("User_6", "Otto#Sawyer#eget@hotmail.org#Nam");
+//     localStorage.setItem("User_7", "Scarlet#Hyde#amet.consectetuer@outlook.net#pede");
+// }
 
 //shows current users
 window.onload = function(){
