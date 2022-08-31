@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT Systems - Issues</title>
+    <link rel="stylesheet" href="./Styles/main.css">
+    <link rel="stylesheet" href="./Styles/Issues.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" class="logo">
+                    <img src="images/logo.png" alt="">
+                    <span class="nav-item">BT Sytems</span>
+                </a>
+            </li>
+            <li><a href="./Home.html">
+                <i class="fa-solid fa-house"></i>
+                <span class="nav-item">Home</span>
+            </a></li>
+            <li><a href="./User.html">
+                <i class="fa-solid fa-pencil"></i>
+                <span class="nav-item">User</span>
+            </a></li>
+            <li><a href="./Issues.html">
+                <i class="fa-solid fa-bars-progress"></i>
+                <span class="nav-item">Bugs</span>
+            </a></li>
+            <li><a href="./Projects.html">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span class="nav-item">Project</span>
+            </a></li>
+            <li><a href="./Login.html" class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="nav-item">Log Out</span>
+            </a></li>
+        </ul>
+    </nav>
+    <div class="page">
+        <div id="content">
+            <div id="backlog">
+                <h1>
+                    Backlog
+                </h1>
+                <Input class="BTN_Issue_Add" type="button" value="+" onclick="OpenAddForm('backlog')"/>
+            </div>
+            
+            <div id="ready">
+                <h1>
+                    Ready
+                </h1>
+                <Input class="BTN_Issue_Add" type="button" value="+" onclick="OpenAddForm('ready')"/>
+            </div>
+            <div id="progress">
+                <h1>
+                    In Progress
+                </h1>
+                <Input class="BTN_Issue_Add" type="button" value="+" onclick="OpenAddForm('progress')"/>
+            </div>
+            <div id="finish">
+                <h1>
+                    Done
+                </h1>
+                <Input class="BTN_Issue_Add" type="button" value="+" onclick="OpenAddForm('finish')"/>
+            </div>
+        </div>
+    </div>
+    <div class = "issuesPopup">
+        <div class="formPopup" id="view-popup">
+            
+        </div>
+        <!-- //////////////////////////////////// -->
+        <div class="formPopup" id="edit-popup">
+            <form class="formContainer">  
+                <button type="button" class="btn-close" onclick="closeEditForm()">Close</button>  
+
+                <p id="edit-summary"><b>Summary:</b>
+                    <input type="text" id="summary-input"/>
+                </p>
+                
+
+                <p id="edit-description"><b>Description:</b>
+                    <textarea id="description-input" cols="22" rows="3"></textarea>
+                </p>
+
+                <p id="edit-severity"><b>Severity:</b>
+                    <select id="severity-input">
+                        <option value="low">low</option>
+                        <option value="medium">medium</option>
+                        <option value="high">high</option>
+                    </select>
+                </p>
+
+                <p id="edit-platform"><b>Project:</b>
+                    <select id="project-input">
+                        
+                    </select> 
+                </p> 
+
+                <p id="edit-user-reported"><b>User Assigned:</b>
+                    <select id="user-input">
+                        
+                    </select> 
+                </p>  
+                
+                <p id="edit-status"><b>Bug Status:</b>
+                    <select id="status-input">
+                        <option value="backlog">Backlog</option>
+                        <option value="ready">Ready</option>
+                        <option value="progress">In Progress</option>
+                        <option value="finish">Done</option>
+                    </select> 
+                </p> 
+
+                <button type="button" id="btn-cancel" onclick="closeEditForm()">Cancel</button>  
+                <button type="button" id="btn-submit" onclick="alert('clicked')">Submit</button>   
+            </form>
+        </div>
+    </div>
+
+    <script src="./Javascript/Issues.js" defer></script>
+
+</body>
+</html>
