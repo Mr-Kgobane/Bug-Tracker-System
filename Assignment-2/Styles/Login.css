@@ -7,23 +7,32 @@ body{
 }
 
 .logo{
+    width: 500px;
+    height: 200px;
     position: relative;
+    top: 45%;
+    left: calc(300% - 50px);
+    transform: translate(50%,-50%);
     text-align:  center;
+    left: 50px;
     display: flex;
     transition: all 0.5s ease;
+    background: #eff;
     margin: 10px 0 0 10px;
 }
 
 .logo img{
-    width: 45px;
-    height: 45px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top:30px;
     border-radius: 50%;
 }
 
 .logo span{
     font-weight: bold;
     padding-left: 15px;
-    font-size: 18px;
+    font-size: 50px;
     text-transform: uppercase;
 }
 
@@ -39,8 +48,8 @@ a{
     width: 320px;
     height: 350px;
     position: relative;
-    top: 45%;
-    left: calc(300% - 50px);
+    top: 13%;
+    left: calc(192% - 50px);
     transform: translate(-50%,-50%);
     background: #fff;
     box-sizing: border-box;
@@ -49,7 +58,6 @@ a{
 }
 .Log img{
     width: 100px;
-    
     height: 100px;
     border-radius: 50%;
     position: absolute;
@@ -82,7 +90,7 @@ a{
     padding: 14px 10px;
     width: 180px;
     outline: none;
-    color: #fff;
+    color: #000;
     border-radius: 5px;
     transition: 0.25s;
 }
