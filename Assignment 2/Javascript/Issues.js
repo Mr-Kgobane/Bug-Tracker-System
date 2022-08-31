@@ -62,7 +62,8 @@ function LoadBugs(){
             <p class="duration">${values[3]}</p>
             <button class="view-more" onclick="openEditForm('${key}')">-view more-</button>`;
             
-            let keyValues = localStorage.getItem(key);
+            
+            let keyValues = localStorage.getItem(key);               
             //console.log(keyValues);
             if (keyValues.includes('#backlog')){
                 backlog.appendChild(div.cloneNode(true));
@@ -75,7 +76,9 @@ function LoadBugs(){
             }
             else if (keyValues.includes('#finish')){
                 finish.appendChild(div.cloneNode(true)); 
-            }      
+            }   
+
+            severity_color(key);   
         }
     }
 }
@@ -227,3 +230,26 @@ function EditBug(summary, description, submittedBy, date, project, assignedTo, s
 }
 //===================================================================================================================================================================
 //===================================================================================================================================================================
+
+// Color Assignment of attributes
+
+function severity_color(myKey){
+    let values = localStorage.getItem(myKey).split("#");
+    //console.log(myKey);
+
+    let keyValues = localStorage.getItem(myKey);
+    if (keyValues.includes('#low')){
+        document.querySelector('#'+`${myKey}` + ' .severity').style.backgroundColor = "green";
+    }
+    else if (keyValues.includes('#medium')){
+        document.querySelector('#'+`${myKey}` + ' .severity').style.backgroundColor = "yellow";
+    }
+    else if (keyValues.includes('#high')){
+        document.querySelector('#'+`${myKey}` + ' .severity').style.backgroundColor = "red";
+    }
+}
+
+function platform_color(myKey){
+    let values = localStorage.getItem(myKey).split("#");
+
+}

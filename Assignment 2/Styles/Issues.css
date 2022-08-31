@@ -52,6 +52,7 @@ h1{
 .BTN_Issue_Add{
     width: 90%;
     padding: 7px;
+    margin-bottom: 1rem;;
     border-radius: 10px;
     font-size: 200%;
 }
@@ -136,7 +137,7 @@ h1{
 }
 
 .scroll_bar{
-    height: 80%;
+    height: 83%;
     overflow-y: auto;
 }
 
