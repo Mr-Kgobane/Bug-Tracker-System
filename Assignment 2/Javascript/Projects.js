@@ -62,7 +62,7 @@ function loadProjects(){
         }
     }
 }
-////////////////////////////////////////////////////////////////////////////////////////
+
 function DisableForm(){
     // Disables all the buttons on the main page.
     let addButton = document.getElementById("add-project");
@@ -103,6 +103,7 @@ function EnableForm(){
 
 // This is for a popup menu to change project details.
 function OpenAddForm(){
+    selectedProject = "";
     document.getElementById("edit-popup").style.display = "block";
     document.querySelector(".btn-submit").setAttribute("onclick", "AddProject('project-name-input')");
     document.querySelector("#project-name-input").setAttribute("value", ``);
@@ -121,46 +122,23 @@ function CloseForm(){
     document.getElementById("edit-popup").style.display = "none";
     EnableForm();
 }
-
+//Project Edits:
+//===================================================================================================================================================================
+// Removes a project.
 function RemoveProject(key){
-    try{
+    if (confirm(`Are you sure you want to delete project: ${localStorage.getItem(key)}`)) {
         localStorage.removeItem(key);
         location.reload();
     }
-    catch{
-        alert("Something went wrong");
-    }
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////
+
 // Edits a project.
 function EditProject(name){
     let unique = true;
-
-    try{
-        name = document.getElementById(name).value;
-
-        // Makes a blonk values so we can test easier for duplicates before we replace.
-        let dummy = localStorage.getItem(selectedProject);
-        localStorage.setItem(selectedProject, "");
-        // Tests if the project name is unique before adding.
-        for (let i = 0; i < localStorage.length; i++) {
-            let key = localStorage.key(i);
-            value = localStorage.getItem(key);
-            if ((value == name) && (key.includes("Project"))) {
-                unique = false;
-            }
-        }
-
-        if (unique) {
-            localStorage.setItem(selectedProject, name);
-        }
-        else{
-            localStorage.setItem(selectedProject, dummy);
-            alert(`That project name already exists`);
-        }
-    }
-    catch{
-        alert("Something went wrong");
+    name = document.getElementById(name).value;
+    if (Validate(name)) {
+        localStorage.setItem(selectedProject, name);
+        location.reload();
     }
 }
 
@@ -168,29 +146,31 @@ function EditProject(name){
 function AddProject(name){
     let unique = true;
     let value;
+    // We have the ID's of the input objects now we convert them to that object's values.
+    name = document.getElementById(name).value;
+    if (Validate(name)) {
+        localStorage.setItem(`Project_${localStorage.length}`, name);
+        location.reload();
+    }
+}
 
-    try{
-        // We have the ID's of the input objects now we convert them to that object's values.
-        name = document.getElementById(name).value;
-        // Tests if the project name is unique before adding.
+// Validates the input.
+function Validate(name){
+    if (name == "") {
+        alert("Some fields still have to be filled in");
+        return false;
+    }
+    else{
         for (let i = 0; i < localStorage.length; i++) {
             let key = localStorage.key(i);
             value = localStorage.getItem(key);
-            if ((value == name) && (key.includes("Project"))) {
-                unique = false;
+            if ((key.includes("Project")) && (value == name) && (key != selectedProject)) {
+                alert("The project name is not unique");
+                return false;
             }
         }
 
-        if (unique) {
-            // localstorage can only store 1 value for each record, so we have to get creative in order to store multiple values. We separate each value with a "#".
-            localStorage.setItem(`Project_${localStorage.length}`, name);
-            CloseForm();
-        }
-        else{
-            alert("That project name already exists");
-        }
-    }
-    catch{
-        alert("Something went wrong");
+        return true;
     }
 }
+//===================================================================================================================================================================

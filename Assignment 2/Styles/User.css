@@ -15,11 +15,6 @@
     grid-area: User;
 }
 
-#myUsers{
-    grid-area: New;
-    padding: 20px;
-}
-
 .User{  
     display: block;
     width: 300px;
@@ -33,7 +28,7 @@
     color: #1199ff;
     width: 200px;
     margin-bottom: 10px;
-    height: 40px;
+    height: 50px;
     font-size: 14px;
     text-align: center;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
@@ -182,7 +177,7 @@ div #Container.new{
     padding: 20px;
 }
 
-.btn-RemoveEdit{
+.btn-Remove,.btn-Edit{
     width: 70px;
     height: 30px;
     background: #fff;
@@ -198,12 +193,12 @@ div #Container.new{
     box-shadow: inset;
 }
 
-.btn-RemoveEdit:hover{
+.btn-Remove:hover,.btn-Edit:hover{
     width: 80px;
     background: #eff;
     color: #000;
-   
 }
+
 .User-detail:hover{
     width: 300px;
     height: 140px;

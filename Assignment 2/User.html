@@ -45,31 +45,32 @@
         <div id="content">
             <div id="addUser">
                 <div class="User">
-                    <button  type="button" class="button" id="popup">
+                    <button  type="button" class="button" id="popup" onclick="OpenAddForm()">
                         <i class="fa-solid fa-plus"></i>
                    </button>
                 </div>
             </div>
 
-            <div id="myUsers">
-                <div class="new" id="Container">     
-                </div>
+            
+            <div class="new" id="Container">  
+
             </div>
+
         </div>
 
-        <form class="Add">       
-            <div class="User-page">
+        <form class="Add" id="Add">       
+            <div class="User-page" id="User">
                 <button class="close" id="close">&times;</button>
                 <img src="images/user3.png" alt="">
                 <input type="text" name="" placeholder="Enter Name" id="name">
                 <input type="text" name="" placeholder="Enter Surname" id="surname">
                 <input type="text" name="" placeholder="Enter Username" id="username" >
                 <input type="email" name="" placeholder="Enter Email" id="email">
-                <button type="button" class="btn">Add</button>
+                <button type="button" class="btn">Submit</button>
             </div>
         </form>     
     </div>
 
-    <script src="./Javascript/Main.js" > </script>
+    <script src="./Javascript/Users.js" > </script>
 </body>
 </html>
