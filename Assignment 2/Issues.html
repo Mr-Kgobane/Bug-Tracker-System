@@ -46,41 +46,80 @@
                 <h1>
                     Backlog
                 </h1>
-                <Input class="BTN_Issue_Add" type="button" value="+" onclick="alert('Button Clicked')"/>
-                <!-- <div class="issue">
-                    <h2 class="summary">Summary</h2>
-                    <p class="user-reported">User Reported</p>
-                    <p class="severity">Severity</p>
-                    <p class="platform">Platform</p>         
-                    <p class="duration">Duration</p>
-                    <button class="view-more" onclick="openEditForm()">-view more-</button>
-                </div> -->
+                <Input class="BTN_Issue_Add" type="button" value="+" onclick="OpenAddForm('backlog')"/>
             </div>
             
             <div id="ready">
                 <h1>
                     Ready
                 </h1>
-                <Input class="BTN_Issue_Add" type="button" value="+" onclick="alert('Button Clicked')"/>
+                <Input class="BTN_Issue_Add" type="button" value="+" onclick="OpenAddForm('ready')"/>
             </div>
             <div id="progress">
                 <h1>
                     In Progress
                 </h1>
-                <Input class="BTN_Issue_Add" type="button" value="+" onclick="alert('Button Clicked')"/>
+                <Input class="BTN_Issue_Add" type="button" value="+" onclick="OpenAddForm('progress')"/>
             </div>
             <div id="finish">
                 <h1>
                     Done
                 </h1>
-                <Input class="BTN_Issue_Add" type="button" value="+" onclick="alert('Button Clicked')"/>
+                <Input class="BTN_Issue_Add" type="button" value="+" onclick="OpenAddForm('finish')"/>
             </div>
         </div>
     </div>
     <div class = "issuesPopup">
-        <div class="formPopup" id="editPopup">
+        <div class="formPopup" id="view-popup">
+            
         </div>
+        <!-- //////////////////////////////////// -->
+        <div class="formPopup" id="edit-popup">
+            <form class="formContainer">  
+                <button type="button" class="btn-close" onclick="closeEditForm()">Close</button>  
 
+                <p id="edit-summary"><b>Summary:</b>
+                    <input type="text" id="summary-input"/>
+                </p>
+                
+
+                <p id="edit-description"><b>Description:</b>
+                    <textarea id="description-input" cols="22" rows="3"></textarea>
+                </p>
+
+                <p id="edit-severity"><b>Severity:</b>
+                    <select id="severity-input">
+                        <option value="low">low</option>
+                        <option value="medium">medium</option>
+                        <option value="high">high</option>
+                    </select>
+                </p>
+
+                <p id="edit-platform"><b>Project:</b>
+                    <select id="project-input">
+                        
+                    </select> 
+                </p> 
+
+                <p id="edit-user-reported"><b>User Assigned:</b>
+                    <select id="user-input">
+                        
+                    </select> 
+                </p>  
+                
+                <p id="edit-status"><b>Bug Status:</b>
+                    <select id="status-input">
+                        <option value="backlog">Backlog</option>
+                        <option value="ready">Ready</option>
+                        <option value="progress">In Progress</option>
+                        <option value="finish">Done</option>
+                    </select> 
+                </p> 
+
+                <button type="button" id="btn-cancel" onclick="closeEditForm()">Cancel</button>  
+                <button type="button" id="btn-submit" onclick="alert('clicked')">Submit</button>   
+            </form>
+        </div>
     </div>
 
     <script src="./Javascript/Issues.js" defer></script>

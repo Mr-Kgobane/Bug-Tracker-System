@@ -49,22 +49,20 @@
 <section id="main">
     <div id="title-main">
         <h1 class="heading">Projects</h1>
-    </div>
-    <div id="first-main">
-        <h4 id="projectName">Project 1</h4>
-    </div>
-    <div>
-        <button type="button" class="btn" onClick="EditProject()">Rename Project</button>
-        <button type="button" class="btn2" onClick="RemoveProject()">Delete Project</button>
+    </div>   
+    <button type="button" id="add-project" onclick="OpenAddForm()">+</button> 
+
+    <div id="edit-popup">
+        <form id="popup-container">
+            <button type="button" class="btn-close" onclick="CloseForm()">Close</button>
+            <p id="edit-name"><b>Project Name:</b>
+                <input type="text" id="project-name-input"/>
+            </p>
+            <button type="button" class="btn-cancel" onclick="CloseForm()">Cancel</button>  
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
     </div>
 
-    <div id="second-main">
-        <h4 id="projectName">Project 2</h4>
-    </div>
-        <div>
-            <button type="button" class="btn" onclick="EditProject()">Rename Project</button>
-            <button type="button" class="btn2" onclick="RemoveProject()">Delete Project</button>
-        </div>           
 </section>
 </div>
 
