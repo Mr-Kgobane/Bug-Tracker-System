@@ -21,24 +21,28 @@ h1{
 /*-------------- Columns ---------------------------------*/
 #backlog{
     grid-area: Backlog;
+    Height: 100%;
     background-color:rgb(219, 219, 219);
     border-radius: 10px;
 }
 
 #ready{
     grid-area: Ready;
+    Height: 100%;
     background-color:rgb(219, 219, 219);
     border-radius: 10px;
 }
 
 #progress{
     grid-area: Progress;
+    Height: 100%;
     background-color:rgb(219, 219, 219);
     border-radius: 10px;
 }
 
 #finish{
     grid-area: Finish;
+    Height: 100%;
     background-color:rgb(219, 219, 219);
     border-radius: 10px;
 }
@@ -131,6 +135,10 @@ h1{
     margin-top: 10px;
 }
 
+.scroll_bar{
+    height: 80%;
+    overflow-y: auto;
+}
 
 /*------------------------ Popup -------------------------*/
 .formPopup{

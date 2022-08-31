@@ -41,11 +41,11 @@ if (localStorage.length <= 0) {
 //Load the dynamic objects according to what is in localstorage:
 window.onload = LoadBugs;
 function LoadBugs(){
-    // To change the height of the container dynamically we must have the containers as variables.
-    const backlog = document.getElementById("backlog");
-    const ready = document.getElementById("ready");
-    const progress = document.getElementById("progress");
-    const finish = document.getElementById("finish");
+    // Container Information
+    const backlog = document.getElementById("backlog_scroll");
+    const ready = document.getElementById("ready_scroll");
+    const progress = document.getElementById("progress_scroll");
+    const finish = document.getElementById("finish_scroll");
 
     for (let i = 0; i < localStorage.length; i++) {
         let key = localStorage.key(i);
@@ -78,16 +78,6 @@ function LoadBugs(){
             }      
         }
     }
-
-    // Makes containers large enough to fit content.
-    backlog.style.height = "fit-content";
-    backlog.style.padding = "5px";
-    ready.style.height = "fit-content";
-    ready.style.padding = "5px";
-    progress.style.height = "fit-content";
-    progress.style.padding = "5px";
-    finish.style.height = "fit-content";
-    finish.style.padding = "5px";
 }
 
 // --------------------- Creates Pupup Window --------------------//
