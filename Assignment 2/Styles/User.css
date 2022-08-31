@@ -1,0 +1,205 @@
+/*User Page*/
+#content
+{
+    display: grid;   
+    grid-template-areas:"User" "New"; 
+    grid-template-rows: 4rem 1fr;  
+    grid-template-columns: 100%;
+    grid-gap: 20px;
+    padding: 20px;
+    text-align: center; 
+    height: 100vh;
+}
+
+#addUser{
+    grid-area: User;
+}
+
+.User{  
+    display: block;
+    width: 300px;
+    padding: 10px;
+    position: relative;
+}
+
+.button{
+    border: 1px solid #1199ff;
+    background: #000;
+    color: #1199ff;
+    width: 200px;
+    margin-bottom: 10px;
+    height: 50px;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.button:hover{
+    color: #000;
+    background: #fff;
+}
+
+.Add{
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    display: none;
+    z-index: 1;
+    right: calc(calc(100vw - 300px)/2); 
+    top: calc(calc(100vh - 400px)/2); 
+}
+
+.Add.active {
+    display: flex;
+}
+
+.User-page{
+    height: 300px;
+    width:300px;
+    background: #fff;
+    padding: 20px;
+    margin: 7px;
+    border-radius: 5px;
+}
+
+.User-page img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    left: calc(0% + 15px);
+}
+
+input,.btn{
+    margin: 10px auto;
+}
+
+.User-page input[type="text"]{
+    display: block;
+    font-size: 14px;
+    margin-left: 20px;
+    border: 3px solid gray;
+    padding: 10px 10px;
+    width: 150px;
+    outline: none;
+    color: #000;
+    position: relative;
+    left: 57px;
+    top: -20px;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.User-page input[type="email"],#username{
+    display: block;
+    margin-left: 15px;
+    border: 3px solid gray;
+    padding: 10px 10px;
+    width: 220px;
+    font-size: 14px;
+    outline: none;
+    color: #000; 
+    position: relative;
+    left: -3px;
+    top: -20px;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.User-page input[type="text"]:focus{
+    width: 160px;
+    border-color: #ffc400;
+}
+
+.User-page input[type="email"]:focus, #username:focus{
+    width: 230px;
+    border-color: #ffc400;
+}
+.User-page .btn{
+    border: 0;
+    border: 3px solid #ffc400;
+    padding: 14px 10px;
+    outline: none;
+    width: 120px;
+    color: #000;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    background: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    left: 57px;
+    top: -20px;
+}
+
+.User-page .btn:hover{
+    background: #ffc400;
+}
+
+.User-page .close{  
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 29px -4px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+
+.User-detail{
+    width: 280px;
+    height: 120px;
+    box-shadow: 0px 0px 10px gray;
+    margin: 0 1em 1em 0;
+    background: linear-gradient(#eef,#dfe9f5);
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+div #Container.new{
+    position: relative;
+}
+
+.new {  
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    height: 100%;
+    margin: 20px;
+    padding: 20px;
+}
+
+.btn-Remove,.btn-Edit{
+    width: 70px;
+    height: 30px;
+    background: #fff;
+    margin-right: 30px;
+    color: #000;
+    transition: 0.5s;
+    text-transform: uppercase;
+    align-items: center;
+    border: 2px solid black;
+    position: relative;
+    left: 10px;
+    cursor: pointer;
+    box-shadow: inset;
+}
+
+.btn-Remove:hover,.btn-Edit:hover{
+    width: 80px;
+    background: #eff;
+    color: #000;
+}
+
+.User-detail:hover{
+    width: 300px;
+    height: 140px;
+}
